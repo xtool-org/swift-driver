@@ -147,7 +147,7 @@ let package = Package(
 if ProcessInfo.processInfo.environment["SWIFT_DRIVER_LLBUILD_FWK"] == nil {
     if ProcessInfo.processInfo.environment["SWIFTCI_USE_LOCAL_DEPS"] == nil {
         package.dependencies += [
-            .package(url: "https://github.com/swiftlang/swift-llbuild.git", branch: "release/6.4.x"),
+            .package(url: "https://github.com/xtool-org/swift-llbuild.git", branch: "release/6.4.x"),
         ]
         package.targets.first(where: { $0.name == "SwiftDriverExecution" })!.dependencies += [
             .product(name: "llbuildSwift", package: "swift-llbuild"),
